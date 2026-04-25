@@ -13,6 +13,18 @@
 com.omarea.vtools
 ```
 
+## Root 方案兼容性
+
+模块采用通用 Magisk 模块结构，理论兼容：
+
+- KernelSU
+- Magisk
+- APatch / APM
+
+当前主要在 KernelSU 环境测试通过。
+
+Magisk 和 APatch 用户需要自行确认设备内核满足 eBPF、BTF、kprobe 等要求。这个模块能否正常工作，主要取决于内核能力，而不是 root 管理器本身。
+
 ## 重要说明
 
 这个模块和手机内核强相关。不同手机、不同系统版本、不同内核构建出来的模块不一定通用。
