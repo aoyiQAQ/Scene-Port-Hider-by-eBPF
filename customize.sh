@@ -33,8 +33,7 @@ check_kernel_btf() {
     fi
 
     if [ ! -f "$expected_file" ]; then
-        ui_print "- No kernel BTF fingerprint found; skip anti-misflash check"
-        return 0
+        abort "! No kernel BTF fingerprint (kernel_btf.sha256) found in module package. Rebuild the module with your device's BTF."
     fi
 
     read -r expected < "$expected_file"
